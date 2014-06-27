@@ -1,0 +1,24 @@
+<h1>Detalhes do produto</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Imagem</th>
+      <th>Titulo</th>
+      <th>Descricao</th>
+      <th>Preco</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+      	<td><%= image_tag @product.avatar.url(:thumb) %></td>
+        <td><%= @product.titulo %></td>
+        <td><%= @product.descricao %></td>
+        <td><%= @product.preco %></td>
+  </tbody>
+</table>
+
+<%= link_to 'Alterar', edit_product_path(@product), class: "btn btn-large btn-primary" %> 
+<%= link_to 'Voltar', products_path, class: "btn btn-large btn-primary" %>

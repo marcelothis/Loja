@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loja</title>
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/bootstrap-theme.css" />
+  <script type="text/javascript" src="/assets/bootstrap.js"></script>
+  <script type="text/javascript" src="/assets/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="topo">
+	<div class="sub-topo">
+		<h1>Loja IFRN</h1>
+		<h5>Todos os produtos com descontos que você jamais viu!</h5>
+	</div>
+</div>
+<!-- inicio do meu  -->
+<div class="navbar">
+	<div class="nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
+			<li class="active"><a href="#">Quem somos</a></li>
+			<li class="active"><a href="#">Produtos</a></li>
+			<li class="active"><a href="#">Novas</a></li>
+			<li class="active"><a href="#">Contato</a></li>
+          </ul>
+    </div>
+</div><!--/.nav-collapse -->
+<!-- fim do menu -->
+<div class="conteudo">
+<%= yield %>
+</div>
+<footer>
+	<div class="sub-footer">
+		<h4>Todos os direitos reservados Loja IFRN - CopyRight 2013</h4>
+	</div>
+</footer>
+</body>
+</html>

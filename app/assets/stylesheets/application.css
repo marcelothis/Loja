@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+a{
+	color:#2D6CA2;
+	
+}
+a:hover{
+	color:#000; 
+	text-decoration: underline;
+	background: none;
+}
+h5{
+	padding: 0px;
+	margin: 0px;
+}
+h1 {
+	padding: 20px 0px 20px 0px;
+	margin: 0px;
+}
+.topo{
+	width:100%;
+	height:150px;
+	background:#DCE6F8;
+	border-bottom:5px solid #000;
+}
+.sub-topo{
+	width:980px;
+	height:200px;
+	margin:0 auto;
+}
+
+.conteudo{
+	width:980px;
+	margin:0 auto;
+}
+
+.form-control{
+	width:400px;
+}
+
+.btn-primary {
+	margin-top:20px;
+}
+
+.nav{
+	width: 980px;
+	margin:0 auto;
+}
+
+nav ul li{
+	padding-right: 10px;
+}
+
+.navbar{
+	background: #DCE6F8;
+	border-bottom: 3px solid #ADADAD;
+	box-shadow: 1px 3px 10px #DBDBDB;
+}
+
+footer{
+	width:100%;
+	height:80px;
+	background:#DCE6F8;
+	clear: both;
+	margin-top:30px;
+	border-top:5px solid #000;
+}
+
+.sub-footer{
+	width:980px;
+	margin:0 auto;
+	padding-top: 20px;
+	text-align: center;
+	
+}

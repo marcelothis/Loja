@@ -16,7 +16,7 @@
       	<td><%= image_tag @product.avatar.url(:thumb) %></td>
         <td><%= @product.titulo %></td>
         <td><%= @product.descricao %></td>
-        <td><%= @product.preco %></td>
+        <td><%= number_to_currency (@product.preco) %></td>
   </tbody>
 </table>
 

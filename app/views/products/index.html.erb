@@ -1,4 +1,4 @@
-<h1>Listing products</h1>
+<h1>Produtos cadastrados</h1>
 
 <table class="table">
   <thead>
@@ -17,7 +17,7 @@
       	<td><%= image_tag product.avatar.url(:thumb) %></td>
         <td><%= product.titulo %></td>
         <td><%= product.descricao %></td>
-        <td><%= product.preco %></td>
+        <td><%= number_to_currency (product.preco) %></td>
         <td><%= link_to 'Detalhes', product %></td>
         <td><%= link_to 'Alterar', edit_product_path(product)%></td>
         <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Desesa excluir esse registr?' } %></td>

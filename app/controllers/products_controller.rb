@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
   # GET /products
   # GET /products.json
   def index
@@ -25,7 +24,8 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
+    
+    
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Produto criado com sucesso.' }
@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # PATCH/PUT /products/1

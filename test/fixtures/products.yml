@@ -1,11 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  titulo: MyString
+  titulo: My
   descricao: MyText
   preco: 9.99
 
 two:
   titulo: MyString
   descricao: MyText
-  preco: 9.99
+  preco: -1
+
+three:
+  titulo: MyString
+  descricao: MyText
+  preco: 0
+
+four:
+  titulo: MyString
+  descricao: MyText
+  preco: 1  
+  
+ruby:
+ titulo: Carro
+ descricao: Carro em miniatura para colecionadores.
+ preco: 49.50

@@ -14,13 +14,15 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-      	<td><%= image_tag product.avatar.url(:thumb) %></td>
+      	<td><%= image_tag product.avatar.url(:thumb) %>
+      	</td>
         <td><%= product.titulo %></td>
         <td><%= product.descricao %></td>
         <td><%= number_to_currency (product.preco) %></td>
-        <td><%= link_to 'Detalhes', product %></td>
+        <td><%= link_to image_tag("add_cart.png", :title => "Adicionar ao carrinho", :width => "30px"), linha_items_path(product_id: product) %></td>
+        <!-- ><td><%= link_to 'Detalhes', product %></td>
         <td><%= link_to 'Alterar', edit_product_path(product)%></td>
-        <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Desesa excluir esse registr?' } %></td>
+        <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Desesa excluir esse registr?' } %></td> -->
       </tr>
     <% end %>
   </tbody>

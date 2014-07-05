@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :linha_items
+
+  resources :carrinhos
+
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

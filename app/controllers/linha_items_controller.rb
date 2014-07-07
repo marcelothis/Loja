@@ -37,9 +37,9 @@ class LinhaItemsController < ApplicationController
             status: :unprocessable_entity }
        end
     end
-    @linha_item = LinhaItem.new(linha_item_params)
-    @linha_item.save
-    respond_with(@linha_item)
+#    @linha_item = LinhaItem.new(linha_item_params)
+#    @linha_item.save
+#    respond_with(@linha_item)
   end
 
   def update

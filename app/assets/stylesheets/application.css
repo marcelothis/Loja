@@ -86,3 +86,18 @@ footer{
 	border: none;
 	border: none;
 }
+
+.ordena {
+	margin-bottom: 12px;
+	float: right;
+	position: relative;
+	bottom: 65px;
+}
+
+.imgButton{
+	background: url(/assets/add_cart.png) no-repeat left;
+	background-size: 43px;
+	height: 46px;
+	width: 62px;
+	border: none;
+}

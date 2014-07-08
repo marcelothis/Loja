@@ -3,9 +3,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if(params[:ordena] == "asc")
+      @products = Product.order(preco: :asc)
+    else
+      @products = Product.order(preco: :desc)
+    end
   end
+  
 
+  
   # GET /products/1
   # GET /products/1.json
   def show

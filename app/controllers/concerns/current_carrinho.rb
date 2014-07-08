@@ -1,6 +1,6 @@
 module Current_carrinho 
   extend ActiveSupport::Concern
-   
+
    private
    
    def set_cart 
@@ -9,6 +9,6 @@ module Current_carrinho
      @carrinho = Carrinho.create
      session[:carrinho_id] = @carrinho.id 
    end
-
+  
 
 end

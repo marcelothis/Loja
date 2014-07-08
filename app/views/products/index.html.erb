@@ -1,5 +1,10 @@
 <h1>Produtos cadastrados</h1>
 
+<div class="ordena">
+	<a href="/products?ordena=desc"><img src="/assets/maior_preco.png" width="50px" title="Maior preço" style="margin-right: 15px;"></a>
+	<a href="/products?ordena=asc"><img src="/assets/menor_preco.png" width="50px" title="Menor preço"></a>
+</div>
+
 <table class="table">
   <thead>
     <tr>
@@ -19,7 +24,7 @@
         <td><%= product.titulo %></td>
         <td><%= product.descricao %></td>
         <td><%= number_to_currency (product.preco) %></td>
-		<td><%= button_to 'Comprar', linha_items_path(product_id: product) %></td>
+		<td><%= button_to '', linha_items_path(product_id: product), :class => "imgButton", :title => "Add ao carrinho" %></td>
         <td><%= link_to 'Detalhes', product %></td>
         <td><%= link_to 'Alterar', edit_product_path(product)%></td>
         <td><%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Desesa excluir esse registro?' } %></td>

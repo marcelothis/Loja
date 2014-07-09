@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-<<<<<<< HEAD
+    @products = Product.all
+    
     if(params[:ordena] == "asc")
       @products = Product.order(preco: :asc)
     else
@@ -12,15 +13,6 @@ class ProductsController < ApplicationController
   end
   
 
-=======
-    @products = Product.all
-    @products = Product.order(:titulo) 
-  end
- 
-  def maiorPreco
-    @products = Product.all
-  end
->>>>>>> origin/teste
   
   # GET /products/1
   # GET /products/1.json

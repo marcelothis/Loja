@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :linha_items
-
+  
   resources :carrinhos
 
   resources :products

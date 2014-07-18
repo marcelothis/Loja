@@ -91,7 +91,7 @@ footer{
 	margin-bottom: 12px;
 	float: right;
 	position: relative;
-	bottom: 65px;
+	bottom: 91px;
 }
 
 .imgButton{
@@ -101,3 +101,15 @@ footer{
 	width: 62px;
 	border: none;
 }
+
+input#busca {
+	background: url(/assets/lupa.png) no-repeat right;
+	background-size: 24px;
+	padding: 5px;
+	width: 220px;
+	border: 1px solid #928C8C;
+	box-shadow: 1px 3px 5px #6D6A6A;
+	position: relative;
+	left: 610px;
+	bottom: 53px;
+	}

@@ -12,7 +12,9 @@ class ProductsController < ApplicationController
     end
   end
   
-
+  def busca_index
+    @products = Product.find(:all, :conditions => ["product LIKE ?","%#{params[:busca]}%"])
+  end
   
   # GET /products/1
   # GET /products/1.json

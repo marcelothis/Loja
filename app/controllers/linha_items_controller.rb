@@ -23,20 +23,24 @@ class LinhaItemsController < ApplicationController
 
   def create
     product = Product.find(params[:product_id])
-    @linha_item = @carrinho.linha_items.build(product: product) 
+    @linha_item = @carrinho.add_product(product.id) 
     
     respond_to do |format|
        if @linha_item.save 
-         format.html { redirect_to @linha_item.carrinho,
-           notice: 'Item criado com sucesso' } 
-         format.json { render action: 'Detalhes', 
-           status: :created, location: @linha_item }
+#         format.html { redirect_to @linha_item.carrinho,
+#          notice: 'Item criado com sucesso' } 
+#         format.json { render action: 'Detalhes', 
+#           status: :created, location: @linha_item }
+			format.html { redirect_to @linha_item.carrinho }
+			format.json { render action: 'Detalhes', status: :created, location: @linha_item }
         else
           format.html { render action: 'Novo' } 
           format.json { render json: @linha_item.errors,
             status: :unprocessable_entity }
        end
     end
+	
+	
 #    @linha_item = LinhaItem.new(linha_item_params)
 #    @linha_item.save
 #    respond_with(@linha_item)
@@ -57,7 +61,7 @@ class LinhaItemsController < ApplicationController
       @linha_item = LinhaItem.find(params[:id])
     end
 
-    def linha_item_params
-      params.require(:linha_item).permit(:product_id, :carrinho_id)
-    end
+	def linha_item_params
+		params.require(:linha_item).permit(:product_id)
+	end
 end

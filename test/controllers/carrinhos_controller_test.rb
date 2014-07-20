@@ -39,11 +39,11 @@ class CarrinhosControllerTest < ActionController::TestCase
     assert_redirected_to carrinho_path(assigns(:carrinho))
   end
 
-  test "should destroy carrinho" do
-    assert_difference('Carrinho.count', -1) do
-      delete :destroy, id: @carrinho
-    end
-
-    assert_redirected_to carrinhos_path
-  end
+	test "should destroy carrinho" do
+		assert_difference('Carrinho.count', -1) do
+			session[:cart_id] = @cart.id
+			delete :destroy, id: @carrinho
+		end
+		assert_redirected_to products_path
+	end
 end

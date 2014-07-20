@@ -43,16 +43,16 @@ class LinhaItemsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update linha_item" do
-    patch :update, id: @linha_item, linha_item: { carrinho_id: @linha_item.carrinho_id, product_id: @linha_item.product_id }
-    assert_redirected_to linha_item_path(assigns(:linha_item))
-  end
+	test "should update linha_item" do
+#		patch :update, id: @linha_item, linha_item: { carrinho_id: @linha_item.carrinho_id, product_id: @linha_item.product_id }
+		patch :update, id: @line_item, line_item: { product_id: @linha_item.product_id }
+		assert_redirected_to linha_item_path(assigns(:linha_item))
+	end
 
   test "should destroy linha_item" do
     assert_difference('LinhaItem.count', -1) do
       delete :destroy, id: @linha_item
     end
-
     assert_redirected_to linha_items_path
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140705180545) do
+ActiveRecord::Schema.define(version: 20140719202811) do
 
   create_table "carrinhos", force: true do |t|
     t.datetime "created_at"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140705180545) do
     t.integer  "carrinho_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "quantidade",  default: 1
   end
 
   add_index "linha_items", ["carrinho_id"], name: "index_linha_items_on_carrinho_id"

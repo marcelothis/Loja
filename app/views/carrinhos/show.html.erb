@@ -12,7 +12,7 @@
       <th>Preco und</th>
 	  <th>Quantidade</th>
 	  <th>Total</th>
-      <th colspan="3"></th>
+      <th colspan="3">Aumentar Qtd</th>
     </tr>
   </thead>
 
@@ -23,13 +23,20 @@
 			<td><%= item.product.titulo %></td>
 			<td><%= item.product.descricao %></td>
 			<td><%= number_to_currency (item.product.preco) %></td>
-			<td><input name="linha_item[quantidade]" value=<%= item.quantidade %> type="int" maxlenght="10"/></td>
+			<td><input name="linha_item[quantidade]" value=<%= item.quantidade %> type="int" maxlenght="10" style="border: none;" /></td>
 			<td><%= number_to_currency (item.item_total) %></td>
-			<td><%= button_to 'Atualizar', @item, method: :update%></td>
+			<td>
+				<form action="/linha_items?product_id=<%= item.product.id %>" class="button_to" method="post">
+					<div>
+						<input class="imgButton_quantidade" title="Aumentar quantidade" type="submit" value="">
+						<input name="authenticity_token" type="hidden" value="ZuiEm+DtE5RtkfGZg1cLnVpezu8AlQLiM3swb5W+mKg=">
+					</div>
+				</form>
+			</td>
 		</tr>
 	<% end %>
   </tbody>
 </table>
-<li>TOTAL DA COMPRA: <%=number_to_currency(@carrinho.preco_total) %></li>
-<%= button_to 'Limpar carrinho', @carrinho, method: :delete, data: {confirm: 'Você tem certeza?'} %>
+<p>TOTAL DA COMPRA:<b> <%=number_to_currency(@carrinho.preco_total) %></b></p>
+<%= button_to '', @carrinho, :class => "imgLimparCarrinho", :title => 'Limpar Carrinho', method: :delete, data: {confirm: 'Você tem certeza?'} %>
 <br>

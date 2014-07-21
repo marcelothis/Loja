@@ -102,6 +102,14 @@ footer{
 	border: none;
 }
 
+.imgButton_quantidade{
+	background: url(/assets/aumentar_qtd.png) no-repeat left;
+	background-size: 43px;
+	height: 46px;
+	width: 62px;
+	border: none;
+}
+
 input#busca {
 	background: url(/assets/lupa.png) no-repeat right;
 	background-size: 24px;
@@ -113,3 +121,11 @@ input#busca {
 	left: 610px;
 	bottom: 53px;
 	}
+	
+.imgLimparCarrinho{
+	background: url(/assets/carrinho_vazio.png) no-repeat left;
+	background-size: 43px;
+	height: 46px;
+	width: 62px;
+	border: none;
+}
